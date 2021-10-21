@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Spinner from "../../client/Spinner/Spinner";
 import styles from "./MovieDetailsPage.module.css";
+import { routes } from "../../shared/services/routes";
 
 const CastPage = lazy(() => import("./CastPage"));
 const ReviewsPage = lazy(() => import("./ReviewPage"));
@@ -37,7 +38,7 @@ const MovieDetailsPage = () => {
       const prevLocation = location.state.from;
       history.push(prevLocation);
     } else {
-      history.push("/");
+      history.push(routes.HOME_PAGE);
     }
   };
 

@@ -7,12 +7,10 @@ import { searchMovies } from "../../shared/services/movies";
 
 const MoviesPage = () => {
   const [list, setList] = useState([]);
-  const [query, setQuery] = useState("");
   const history = useHistory();
   const location = useLocation();
 
   const onSubmit = ({ q }) => {
-    setQuery(q);
     history.push({
       pathname: location.pathname,
       search: `q=${q}`,

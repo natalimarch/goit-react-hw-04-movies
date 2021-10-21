@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Spinner from "./client/Spinner/Spinner";
+import { routes } from "./shared/services/routes";
 
 const HomePage = lazy(() => import("./Pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./Pages/MoviesPage/MoviesPage"));
@@ -13,13 +14,13 @@ const Routes = () => {
   return (
     <Suspense fallback={<Spinner />}>
       <Switch>
-        <Route path="/" exact>
+        <Route path={routes.HOME_PAGE} exact>
           <HomePage title="Home Page" />
         </Route>
-        <Route path="/movies" exact>
+        <Route path={routes.MOVIES_PAGE} exact>
           <MoviesPage title="Movies Page" />
         </Route>
-        <Route path="/movies/:movieId">
+        <Route path={routes.MOVIE_DETAILS_PAGE}>
           <MovieDetailsPage title="Movie Details Page" />
         </Route>
         <Route>
