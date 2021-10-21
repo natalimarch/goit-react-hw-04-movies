@@ -1,5 +1,5 @@
 import { useForm } from "../../shared/hooks";
-
+import PropTypes from "prop-types";
 import { initialState } from "./initianState";
 
 const Form = ({ onSubmit }) => {
@@ -13,3 +13,7 @@ const Form = ({ onSubmit }) => {
 };
 
 export default Form;
+
+Form.propTypes = {
+  onSubmit: PropTypes.func,
+};
