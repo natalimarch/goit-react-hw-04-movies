@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import { getMovieInfo } from "../../shared/services/movies";
 import {
   NavLink,

@@ -2,7 +2,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import SearchForm from "../../client/SearchForm";
 import MovieList from "../../client/MovieList";
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import { searchMovies } from "../../shared/services/movies";
 
 const MoviesPage = () => {
